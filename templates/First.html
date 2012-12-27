@@ -10,6 +10,23 @@
 <body>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script>
+		/* function func()
+		 {
+		 var ul = document.getElementById("myUL");
+		 var newLI = document.createElement("LI");
+		 ul.appendChild(newLI);
+		 newLI.innerHTML = document.getElementById("addValue").value;
+		 } */
+		function func() {
+			var oUL = document.getElementsByTagName('ul')[0];
+			var oLI = document.createElement('li');
+			var txt = document.createTextNode(document
+					.getElementById("addValue").value);
+			oLI.appendChild(txt);
+			oUL.insertBefore(oLI, oUL.childNodes[0]);
+		}
+	</script>
 	<div class="container">
 		<div class="column">
 			<div>
@@ -22,7 +39,49 @@
 		</div>
 
 	</div>
-	<div  align="center"   class="container headingfont">DO-IT PROJECT</div>
-	<div class="container"></div>
+	<div align="center" class="container headingfont">
+		<h1>DO-IT PROJECT</h1>
+	</div>
+	<div class="container" ></div>
+	<div class="container-fluid foot">
+		<div class="row-fluid">
+			<div class="span3">
+				<h4>Anurag</h4>
+				<ul id="myUL">
+					<li><input type="text" id="addValue" ondblclick="func()" />
+				</ul>
+
+			</div>
+			<div class="span3">
+				<h4>Vineet</h4>
+				<ul id="myUL">
+					<li><input type="text" id="addValue" ondblclick="func()" />
+				</ul>
+			</div>
+			<div class="span3">
+				<h4>Shishupal</h4>
+				<ul id="myUL">
+					<li><input type="text" id="addValue" ondblclick="func()" />
+				</ul>
+			</div>
+			<div class="span3">
+				<input type="text" id="collabaratorText" /> <input type="button"
+					id="addButton" value="+ add" />
+
+
+			</div>
+		</div>
+	</div>
+
 </body>
+<footer>
+	<div class="container-fluid">
+		<div class="span3">
+			<h4>BACKLOG</h4>
+		</div>
+		<div class="span3">
+			<h4>DONEITEMS</h4>
+		</div>
+	</div>
+</footer>
 </html>
