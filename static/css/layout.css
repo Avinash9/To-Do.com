@@ -1,0 +1,56 @@
+input[type="text"] 
+{ 
+    width:150px;
+}
+li {
+   list-style:rectangle;
+   
+}
+
+span {
+    color: red;
+   
+	
+}
+.containerLayout
+{
+	outline:black dotted thin;
+}
+
+.column
+{
+	margin-top: 27px;
+}
+.pull-right {
+float: right;
+}
+.design
+{
+	font-size: 12px;
+	color: red;
+}
+.headingfont
+{
+	font-size: 20px;
+    padding-top: 35px;
+	
+}
+.foot
+{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.footerDesign
+{
+	padding-top: 15px;
+}
+.footerMenu
+{
+	border-top: 1px solid #B3B3B3;
+	padding-left: 100px;
+}
+.collabarator
+{
+	padding-top: 35px;
+	height: 338px;
+}

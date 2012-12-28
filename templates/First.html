@@ -11,62 +11,56 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
 	<script>
-		/* function func()
-		 {
-		 var ul = document.getElementById("myUL");
-		 var newLI = document.createElement("LI");
-		 ul.appendChild(newLI);
-		 newLI.innerHTML = document.getElementById("addValue").value;
-		 } */
-		function func() {
-			var oUL = document.getElementsByTagName('ul')[0];
-			var oLI = document.createElement('li');
-			var txt = document.createTextNode(document
-					.getElementById("addValue").value);
-			oLI.appendChild(txt);
-			oUL.insertBefore(oLI, oUL.childNodes[0]);
+		function func(element)
+		{
+			var node = $(element);
+			var text=node.val();
+			node.parent().prepend('<li > '+$(element).val()+' </li>');
+			
+		}
+		function show() {
+			var textArea = document.getElementById("collabaratorText").value;
+			var nameArea = document.getElementById("nameToAdd");
+			nameArea.innerHTML = textArea;
+			// var a=document.getElementByTag('container1');
+			var a = '<div class="span3 containerLayout">'
+					+ $('#container1').html() + '</div>'
+			$('#container4').before(a)
 		}
 	</script>
+
+
 	<div class="container">
+
 		<div class="column">
 			<div>
 				<a href="url">Do-it.com</a>
 				<div class="pull-right design">
 					<a href="url">Create a new Project</a>
 				</div>
+
 			</div>
 
 		</div>
 
 	</div>
+	<div style="visibility: hidden" class="span3 containerLayout"
+		id="container1">
+		<h4 id="nameToAdd"></h4>
+		<ul id="myUL">
+
+			<li><input type="text" onchange="func(this)" id="mmm" /></li>
+		</ul>
+
+	</div>
 	<div align="center" class="container headingfont">
 		<h1>DO-IT PROJECT</h1>
 	</div>
-	<div class="container" ></div>
-	<div class="container-fluid foot">
+	<div class="container">
 		<div class="row-fluid">
-			<div class="span3">
-				<h4>Anurag</h4>
-				<ul id="myUL">
-					<li><input type="text" id="addValue" ondblclick="func()" />
-				</ul>
-
-			</div>
-			<div class="span3">
-				<h4>Vineet</h4>
-				<ul id="myUL">
-					<li><input type="text" id="addValue" ondblclick="func()" />
-				</ul>
-			</div>
-			<div class="span3">
-				<h4>Shishupal</h4>
-				<ul id="myUL">
-					<li><input type="text" id="addValue" ondblclick="func()" />
-				</ul>
-			</div>
-			<div class="span3">
+			<div id="container4" class="span3 collabarator containerLayout">
 				<input type="text" id="collabaratorText" /> <input type="button"
-					id="addButton" value="+ add" />
+					id="addButton" value="+ add" onclick="show()" />
 
 
 			</div>
@@ -74,8 +68,8 @@
 	</div>
 
 </body>
-<footer>
-	<div class="container-fluid">
+<footer class="footerDesign">
+	<div class="container-fluid footerMenu">
 		<div class="span3">
 			<h4>BACKLOG</h4>
 		</div>
@@ -83,5 +77,6 @@
 			<h4>DONEITEMS</h4>
 		</div>
 	</div>
+
 </footer>
 </html>

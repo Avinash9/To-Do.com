@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+
+<script language="javascript">
+function fieldCreate(elem) {
+
+	var mainContainer = document.getElementById('mainContainer');
+	
+	var fieldContainer = document.createElement('div');
+	fieldContainer.style.display = 'inline';
+	
+	var fieldElem = document.createElement('input');
+	
+	fieldContainer.appendChild(fieldElem);
+	
+	mainContainer.appendChild(fieldContainer);
+	
+}
+</script>
+</head>
+
+<body>
+<input type="button" value="Add to the same row container" onclick="fieldCreate()" />
+<input type="button" value="Add to a new row container"/>
+<div id="mainContainer"></div>
+
+
+</body>
+</html>
