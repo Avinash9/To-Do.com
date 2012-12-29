@@ -10,10 +10,9 @@
 			var textArea = document.getElementById("collabaratorText").value;
 			var nameArea = document.getElementById("nameToAdd");
 			nameArea.innerHTML = textArea;
-			// var a=document.getElementByTag('container1');
 			var a = '<div class="span3 containerLayout">'
-					+ $('#container1').html() + '</div>'
-			$('#container4').before(a)
+					+ $('#hiddenContainer').html() + '</div>'
+			$('#colabratorContainer').before(a)
 			var users = ['Avinash', 'Arpit', 'Bittu', 'Vikas', 'Shubham', 'Vineet', 'Shishupal', 'Anshu', 'Himanshu', 'Sri', 'Sandeep', 'Vikas', 'Shishupal', 'Shilpa'].sort();
             $(".typeaheadDemo").typeahead({source: users, items:5});
 			
