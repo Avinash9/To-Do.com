@@ -11,27 +11,7 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
-	<script>
-		function func(element)
-		{
-			var node = $(element);
-			var text=node.val();
-			node.parent().prepend('<li > '+$(element).val()+' </li>');
-		}
-		function show() {
-			var textArea = document.getElementById("collabaratorText").value;
-			var nameArea = document.getElementById("nameToAdd");
-			nameArea.innerHTML = textArea;
-			// var a=document.getElementByTag('container1');
-			var a = '<div class="span3 containerLayout">'
-					+ $('#container1').html() + '</div>'
-			$('#container4').before(a)
-		}
-		jQuery(document).ready(function() {
-            var users = ['Avinash', 'Arpit', 'Bittu', 'Vikas', 'Shubham', 'Vineet', 'Shishupal', 'Detroit', 'Kansas City', 'Minnesota', 'Los Angeles', 'Oakland', 'Seattle', 'Texas'].sort();
-            $(".typeahead1").typeahead({source: users, items:5});
-        });
-	</script>
+	<script src="../static/js/doit.js"></script>
 
 
 	<div class="container">
@@ -53,7 +33,7 @@
 		<h4 id="nameToAdd"></h4>
 		<ul id="myUL">
 
-			<li><input type="text"    onchange="func(this)" class="typeahead1" /></li>
+			<li><input type="text"    onchange="addValueInLi(this)" class="typeaheadDemo" /></li>
 		</ul>
 
 	</div>
@@ -63,8 +43,8 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div id="container4" class="span3 collabarator containerLayout">
-				<input type="text" id="collabaratorText" class="typeahead1"/> <input type="button"
-					id="addButton" value="+ add" onclick="show()" />
+				<input type="text" id="collabaratorText" class="typeaheadDemo"/> <input type="button"
+					id="addButton" value="+ add" onclick=" showNewConatainer()" />
 
 
 			</div>
