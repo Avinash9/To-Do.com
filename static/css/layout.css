@@ -16,6 +16,10 @@ span {
 {
 	outline:black dotted thin;
 }
+.containerLayoutFoot
+{
+	outline:pink dotted thin;
+}
 
 .column
 {
